@@ -1,0 +1,301 @@
+/*CSS Reset*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+button {
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+.material-icons {
+    font-size: inherit!important;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #1c1c1c;
+    background: radial-gradient(circle, #1c1c1c 0%, #0a0a0a 100%);
+}
+
+/*Fonts*/
+body,
+input,
+select {
+    font-family: Roboto, Arial, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+/*End Fonts*/
+
+/*End CSS Reset*/
+
+#cropper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+
+#loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    text-align: center;
+}
+
+.upload__logo {
+    display: block;
+    margin: auto;
+    height: 200px;
+    text-align: center;
+}
+
+.upload__logo--wrapper:hover #svg_5 path {
+    transform-origin: center;
+    animation: logo--animate .3s ease-in;
+}
+
+@keyframes logo--animate {
+    0% {
+        transform: scale(1) rotate(0);
+    }
+    50% {
+        transform: scale(.2) rotate(180deg);
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
+}
+
+.box {
+    margin-top: 20px;
+    padding: 40px 80px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    box-shadow: inset 0 0 10px #000;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.numbering {
+    padding: 20px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upload__start {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    border-bottom: 2px solid #fff;
+    text-align: center;
+    width: 100px;
+    margin-left: 20px;
+}
+
+.upload__footer {
+    margin-top: 40px;
+    text-align: center;
+    color: #fff;
+}
+
+.upload__footer span {
+    color: #ff5454;
+}
+
+.upload__footer a {
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    padding: 0 2px;
+}
+
+.upload__footer a:after {
+    content: "";
+    transition: height ease-in .1s;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: #ff5454;
+    z-index: -1;
+}
+
+.upload__footer a:hover:after {
+    height: 100%;
+}
+
+.hide {
+    display: none!important;
+}
+
+.cropper__content {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.cropper__footer {
+    position: absolute;
+    pointer-events: none;
+    bottom: 20px;
+    right: 0;
+    left: 0;
+    text-align: center;
+    z-index: 2;
+    color: #fff;
+    font-size: 4rem;
+    border-radius: 5px;
+    padding: 40px 80px;
+    text-transform: uppercase;
+}
